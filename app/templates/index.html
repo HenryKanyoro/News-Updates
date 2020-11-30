@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News-Updates </title>
+    {% endif %}
+</head>
+
+<body>
+    <!-- Content block -->
+    {% block content %}
+
+    <!-- Sources section  -->
+   
+    <div class="container landing-content">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="list-group list-group-flush">
+                            <h3 class="News"> Up To Date-News-Updates</h3>
+                            <br>
+                            <div class="updates">
+                              {% for general_category in general %}
+
+                            </div>
+
+            <div class="card-title bg-success">
+                        <a href="/newsarticle/{{general_category.id}}"
+                            class="list-group-item list-group-item-action srces " style="background-color:rgb(127, 221, 245);">{{general_category.name}}</a>
+                        {% endfor %}
+                      </div>
+                    </div>
+
+            </div>
+              
+
+            
+        </div>
+        
+
+    </div>
+
+    <ul>
+
+
+
+    </ul>
+
+    {% endblock%}
+
+
+
+</body>
+
+</html>

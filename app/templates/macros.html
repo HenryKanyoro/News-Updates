@@ -1,0 +1,7 @@
+{% macro displayNewsheadlines(news_notifications) %}
+
+    {% for news in news_notifications %}
+        <li>{{ news.headlines}}</li>
+    {% endfor %}
+
+{% endmacro %}
